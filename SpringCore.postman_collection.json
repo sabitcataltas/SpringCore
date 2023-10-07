@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "1fc28c37-3451-4c09-91a4-4e57b51a9a0c",
+		"name": "SpringCore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4784775"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWJpdCIsInRlc3QiOiJwb3RhdG8iLCJleHAiOjE2OTY2NTU5MzcsImlhdCI6MTY5NjYzNzkzN30.x8A5cv1eBHA940ElWtEZjCWXKzB_a8-Efg_yEZhmIL3wGH2Xu4rlUsZwjhxz_tCZbKLGQ3pn8D4x07L-RGDiLQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWJpdCIsInRlc3QiOiJwb3RhdG8iLCJleHAiOjE2OTY2NTUxNzMsImlhdCI6MTY5NjYzNzE3M30.0R18N3TkRQwbPiXdTgYcRBg7FOfyLHG5RkLNbHpsjDu5vB0pAmt63buY7Z6WJ3Q7ePBZ5aDUZ3XN-_bOI7JyNQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/15",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWJpdCIsInRlc3QiOiJwb3RhdG8iLCJleHAiOjE2OTY2NTU5MzcsImlhdCI6MTY5NjYzNzkzN30.x8A5cv1eBHA940ElWtEZjCWXKzB_a8-Efg_yEZhmIL3wGH2Xu4rlUsZwjhxz_tCZbKLGQ3pn8D4x07L-RGDiLQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/151",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"151"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWJpdCIsInRlc3QiOiJwb3RhdG8iLCJleHAiOjE2OTY2NTE3NTksImlhdCI6MTY5NjYzMzc1OX0.oYvJJSeIAUEiEvsbkbZufH-MOTJZh-d9EViqC01xwA2XWbDMIzvzbAeRGyq_-0CN8EGwzW_vktC6m3Pyx13p7w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": 15,\r\n        \"firstName\": \"asdasd\",\r\n        \"lastName\": \"Admin\",\r\n        \"username\": \"admin\",\r\n        \"email\": \"admin@admin.com\",\r\n        \"enabled\": true,\r\n        \"version\": 0,\r\n        \"status\": \"ACTIVE\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nameSurname\":\"sabitctt\",\n\t\"username\":\"sabit\",\n\t\"password\":\"123\",\n\t\"email\":\"sabit@ctt\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/token/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"token",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"sabit\",\n\t\"password\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
